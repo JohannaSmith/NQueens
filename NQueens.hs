@@ -1,14 +1,13 @@
 module NQueens where
 
-
 nQueens size
-	|size == 2 = "No solution"
-	|size == 3 = "No solution"
+	|size == 2 = error "No solution"
+	|size == 3 = error "No solution"
 	|otherwise = length $ nQueensNumSoln size
 
 nQueensNumSoln size
-	|size == 2 = "No solution"
-	|size == 3 = "No solution"
+	|size == 2 = error "No solution"
+	|size == 3 = error "No solution"
 	|otherwise = helpQueens size
 	
 helpQueens size = [(1,2), (4,4)]
