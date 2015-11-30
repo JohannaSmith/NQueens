@@ -3,14 +3,14 @@ module NQueens where
 nQueens size
 	|size == 2 = error "No solution"
 	|size == 3 = error "No solution"
-	|otherwise = length $ nQueensNumSoln size
+	|otherwise = helpQueens size
 
 nQueensNumSoln size
 	|size == 2 = error "No solution"
 	|size == 3 = error "No solution"
-	|otherwise = helpQueens size
+	|otherwise = length(nQueens size)
 	
-helpQueens size = [(1,2), (4,4)]
+helpQueens size = [(1,2),(4,4)]
 	
 -- wasn't sure how to declare this but something like this to store the locations of the queens like she proposed
 --queenLoc [(Int, Int)]
